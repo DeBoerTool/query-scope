@@ -29,7 +29,7 @@ class Where extends AbstractScope implements Scope
         $this->value = $value;
     }
 
-    public function scope (Builder $query): Builder
+    public function apply (Builder $query): Builder
     {
         return $query->where($this->column, $this->operator, $this->value);
     }

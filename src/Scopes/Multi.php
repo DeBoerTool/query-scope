@@ -23,10 +23,10 @@ class Multi extends AbstractScope implements Scope
         $this->addMany($scopes);
     }
 
-    public function scope (Builder $query): Builder
+    public function apply (Builder $query): Builder
     {
         foreach ($this->scopes as $scope) {
-            $query = $scope->scope($query);
+            $query = $scope->apply($query);
         }
 
         return $query;
