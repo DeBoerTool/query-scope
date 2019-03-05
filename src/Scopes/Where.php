@@ -3,10 +3,9 @@
 namespace Dbt\Query\Scopes;
 
 use Dbt\Query\AbstractScope;
-use Dbt\Query\Scope;
 use Illuminate\Database\Query\Builder;
 
-class Where extends AbstractScope implements Scope
+class Where extends AbstractScope
 {
     /** @var string */
     protected $column;

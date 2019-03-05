@@ -2,7 +2,7 @@
 
 namespace Dbt\Query\Scopes;
 
-class WhereEquals extends Where
+class WhereLike extends Where
 {
     /**
      * @param string $column
@@ -10,6 +10,6 @@ class WhereEquals extends Where
      */
     public function __construct (string $column, $value)
     {
-        parent::__construct($column, '=', $value);
+        parent::__construct($column, 'like', $value);
     }
 }
