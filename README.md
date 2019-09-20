@@ -1,4 +1,4 @@
-# Type checker for PHP
+# Class-Based Query Scoper for Laravel's Query Builder
 
 ## Installation
 
