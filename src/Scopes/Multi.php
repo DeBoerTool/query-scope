@@ -43,4 +43,9 @@ class Multi extends AbstractScope implements Scope
     {
         $this->scopes[] = $scope;
     }
+
+    public function push (Scope ...$scopes): void
+    {
+        array_push($this->scopes, ...$scopes);
+    }
 }
