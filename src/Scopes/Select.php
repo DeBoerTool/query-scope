@@ -2,11 +2,11 @@
 
 namespace Dbt\Query\Scopes;
 
-use Dbt\Query\AbstractScope;
+use Dbt\Query\Abstracts\ScopeAbstract;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\Expression;
 
-class Select extends AbstractScope
+class Select extends ScopeAbstract
 {
     /** @var string[] */
     private $columns = [];

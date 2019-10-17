@@ -2,10 +2,10 @@
 
 namespace Dbt\Query\Scopes;
 
-use Dbt\Query\AbstractScope;
+use Dbt\Query\Abstracts\WhereAbstract;
 use Illuminate\Database\Query\Builder;
 
-class Where extends AbstractScope
+class Where extends WhereAbstract
 {
     /** @var string */
     protected $column;
@@ -17,8 +17,6 @@ class Where extends AbstractScope
     protected $value;
 
     /**
-     * @param string $column
-     * @param string $operator
      * @param string|int|float $value
      */
     public function __construct (string $column, string $operator, $value)

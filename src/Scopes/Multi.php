@@ -2,16 +2,16 @@
 
 namespace Dbt\Query\Scopes;
 
-use Dbt\Query\AbstractScope;
-use Dbt\Query\Scope;
+use Dbt\Query\Abstracts\ScopeAbstract;
+use Dbt\Query\Interfaces\ScopeInterface;
 use Illuminate\Database\Query\Builder;
 
 /**
  * @decorates \Dbt\Query\AbstractScope
  */
-class Multi extends AbstractScope implements Scope
+class Multi extends ScopeAbstract implements ScopeInterface
 {
-    /** @var Scope[] */
+    /** @var ScopeInterface[] */
     private $scopes = [];
 
     /**
@@ -39,12 +39,12 @@ class Multi extends AbstractScope implements Scope
         }
     }
 
-    public function add (Scope $scope): void
+    public function add (ScopeInterface $scope): void
     {
         $this->scopes[] = $scope;
     }
 
-    public function push (Scope ...$scopes): void
+    public function push (ScopeInterface ...$scopes): void
     {
         array_push($this->scopes, ...$scopes);
     }

@@ -2,10 +2,10 @@
 
 namespace Dbt\Query\Scopes;
 
-use Dbt\Query\AbstractScope;
+use Dbt\Query\Abstracts\ScopeAbstract;
 use Illuminate\Database\Query\Builder;
 
-class OrderBy extends AbstractScope
+class OrderBy extends ScopeAbstract
 {
     /** @var string */
     protected $column;

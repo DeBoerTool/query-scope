@@ -28,7 +28,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Dbt\\Query\\": "src/"
+      "Dbt\\Query\\": ["src/", "common/"]
     }
   },
   "autoload-dev": {

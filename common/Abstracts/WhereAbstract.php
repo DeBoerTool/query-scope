@@ -1,10 +1,11 @@
 <?php
 
-namespace Dbt\Query;
+namespace Dbt\Query\Abstracts;
 
+use Dbt\Query\Interfaces\ScopeInterface;
 use Illuminate\Database\Query\Builder;
 
-abstract class AbstractScope implements Scope
+abstract class WhereAbstract implements ScopeInterface
 {
     public function __invoke (Builder $query): Builder
     {
