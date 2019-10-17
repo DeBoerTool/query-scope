@@ -16,6 +16,11 @@ class WhereGroup extends ScopeAbstract
         $this->wheres = new Multi($wheres);
     }
 
+    public function push (WhereInterface $where): void
+    {
+        $this->wheres[] = $where;
+    }
+
     public function apply (Builder $query): Builder
     {
         return $query->where(function (Builder $nested) {
